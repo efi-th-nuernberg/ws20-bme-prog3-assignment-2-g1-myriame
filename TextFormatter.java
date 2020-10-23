@@ -15,12 +15,19 @@ class TextFormatter {
 
   // Konstruktor
   public TextFormatter(int maxLineLength) {
-    // ...
+    int x = text.length()/ maxLineLength;
+    for (int i = 0; i<x; i++)
+    {
+      String a = text.substring(i*maxLineLength,(i+1)*maxLineLength);
+      System.out.println(a);
+    }
   }
+
+   
 
   // Ausgabe
   public void print(String aText) {
-    System.out.println("Hier sollte der Text mit passendem Umbruch erscheinen.");
+    System.out.println(aText);
   }
 
 }
