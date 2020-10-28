@@ -3,27 +3,31 @@ import java.util.StringTokenizer;
 
 
 /**
-/* Diese Klasse gibt die lange Texte in einem
+/* Diese Klasse gibt lange Texte in einem
 /* Layout mit fester Spaltenbreite aus.
 /* Autors: Myriame Lhaddane, Erik Schneiderer
 **/
 class TextFormatter{
 
   private static final String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy " +
-          "eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " +
-          "accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-          "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
-          "tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et " +
-          "justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est " +
-          "Lorem ipsum dolor sit amet.";
+  "eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " +
+  "accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
+  "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
+  "tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et " +
+  "justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est " +
+  "Lorem ipsum dolor sit amet.";
+  
   private final int maxLineLength;
 
   public static void main(String[] args) {
     TextFormatter formatter = new TextFormatter(30);
     
     formatter.printLeftText(formatter.cutText(text));
+    System.out.print("\n\n\n\n");
     formatter.printRightText(formatter.cutText(text));
+    System.out.print("\n\n\n\n");
     formatter.printCenterText(formatter.cutText(text));
+    System.out.print("\n\n\n\n");
     formatter.printBlockText(formatter.cutText(text));
   }
 
@@ -83,7 +87,6 @@ class TextFormatter{
 	  {
 		  System.out.println(textInStrings.get(i));
 	  }
-    System.out.print("\n\n\n\n");
   }
   
   public void printRightText(ArrayList<String> textInStrings)  
@@ -100,7 +103,6 @@ class TextFormatter{
 		  }
 		  System.out.println(line);
 	  }
-    System.out.print("\n\n\n\n");
   }
  
   public void printCenterText(ArrayList<String> textInStrings)  
@@ -117,7 +119,6 @@ class TextFormatter{
 		  }
 		  System.out.println(line);
 	  }
-    System.out.print("\n\n\n\n");
   }
   
   public void printBlockText(ArrayList<String> textInStrings)  
